@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector(".header-top__burger").addEventListener("click", function () {
         document.querySelector(".header-top__nav").classList.add("active");
     })
-    document.querySelector(".nav__close").addEventListener("click", function () {
+    document.querySelector(".header-top__nav-close").addEventListener("click", function () {
         document.querySelector(".header-top__nav").classList.remove("active");
     })
 
@@ -169,9 +169,9 @@ document.querySelectorAll('.tabs-item').forEach(function (tabsBtn) {
     tabsBtn.addEventListener('click', function (e) {
         const path = e.currentTarget.dataset.path;
         document.querySelectorAll('.tabs-item').forEach(function (btn) {
-            btn.classList.remove('tabs__item-active')
+            btn.classList.remove('tabs-item-active')
         });
-        e.currentTarget.classList.add('tabs__item-active');
+        e.currentTarget.classList.add('tabs-item-active');
         document.querySelectorAll('.tab-content').forEach(function (tabsBtn) {
             tabsBtn.classList.remove('tab-content-active')
         });
@@ -329,7 +329,6 @@ validation
         {
             validator: (value) => {
                 const phone = selector.inputmask.unmaskedvalue()
-
                 return Number(phone) && phone.length === 10;
             },
             errorMessage: 'Недопустимый формат',
