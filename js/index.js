@@ -12,16 +12,24 @@ document.addEventListener('DOMContentLoaded', function () {
         this.classList.add("active");
     })
 
+    let form = document.querySelector(".header-top__form");
+    let closeBtn = document.querySelector('.js-close-form');
+
+    function closeForm() {
+        form.classList.remove("header-top__form__active");
+        form.querySelector("input").value = "";
+        document.querySelector(".header-top__link").classList.remove("active")
+    }
+
     document.addEventListener("click", function (e) {
         let target = e.target;
-        let form = document.querySelector(".header-top__form");
-        if (!target.closest(".header-top__form-container")) {
-            form.classList.remove("header-top__form__active");
-            form.querySelector("input").value = "";
-            document.querySelector(".header-top__link").classList.remove("active")
-        }
-    })
 
+        if (!target.closest(".header-top__form-container")) {
+
+        }
+    });
+
+    closeBtn.addEventListener('click', closeForm);
 
     const swiper = new Swiper('.swiper', {
         direction: 'horizontal',
@@ -105,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
             577: {
                 slidesPerView: 2,
                 slidesPerGroup: 2,
-                spaceBetween: 30
+                spaceBetween: 35
             },
 
             1361: {
@@ -184,22 +192,22 @@ document.addEventListener("DOMContentLoaded", () => {
     let eventsSlider = new Swiper(".events__swiper", {
         direction: 'horizontal',
         slidesPerGroup: 1,
-        slidesPerView: 1.02,
+        slidesPerView: 1,
         spaceBetween: 20,
 
         breakpoints: {
             1360: {
                 spaceBetween: 50,
-                slidesPerView: 3.02,
+                slidesPerView: 3,
                 slidesPerGroup: 2,
             },
             992: {
-                slidesPerView: 3.02,
+                slidesPerView: 3,
                 slidesPerGroup: 2,
-                spaceBetween: 20,
+                spaceBetween: 25,
             },
             577: {
-                slidesPerView: 2.02,
+                slidesPerView: 2,
                 slidesPerGroup: 2,
                 spaceBetween: 30,
             }
@@ -226,22 +234,22 @@ document.addEventListener("DOMContentLoaded", () => {
     let projectsSlider = new Swiper(".projects__partners-swiper", {
         direction: 'horizontal',
         slidesPerGroup: 1,
-        slidesPerView: 1.03,
+        slidesPerView: 1,
         spaceBetween: 33,
 
         breakpoints: {
             1450: {
                 spaceBetween: 50,
-                slidesPerView: 3.04,
+                slidesPerView: 3,
                 slidesPerGroup: 3,
             },
             992: {
-                slidesPerView: 2.04,
+                slidesPerView: 2,
                 slidesPerGroup: 2,
                 spaceBetween: 50,
             },
             720: {
-                slidesPerView: 2.03,
+                slidesPerView: 2,
                 slidesPerGroup: 2,
                 spaceBetween: 33,
             }
