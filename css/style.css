@@ -963,6 +963,7 @@ body {
 }
 
 .check {
+    position: relative;
     cursor: auto;
 }
 
@@ -989,11 +990,11 @@ body {
     transition-timing-function: ease-in-out;
 }
 
-.check-box:before {
+.check-box::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 25%;
+    top: 10px;
     width: 12px;
     height: 12px;
     border: 1px solid var(--white);
@@ -1001,44 +1002,41 @@ body {
 }
 
 .check__input+.check-box {
-    position: relative;
     cursor: pointer;
 }
-
 
 .check__input:hover+.check-box,
 .check__input:focus-visible+.check-box {
     color: #C283F3;
 }
 
-.check__input:focus-visible+.check-box:before {
+.check__input:hover+.check-box::before,
+.check__input:focus-visible+.check-box::before {
     border: 1px solid #C283F3;
 }
 
-.check-box:after {
+.check-box::after {
     content: '\22C5';
     position: absolute;
     left: 1.5px;
-    top: -7px;
+    top: -2.5px;
     font-size: 30px;
     color: #C283F3;
     opacity: 0;
     transition: opacity .3s ease-in-out;
 }
 
-.check__input:checked+.check-box:after {
+.check__input:checked+.check-box::after {
     opacity: 1;
 }
 
-.check__input:checked+.check-box:before {
+.check__input:checked+.check-box::before {
     border: 1px solid #C283F3;
 }
 
 .check__input:checked+.check-box {
     color: #C283F3;
 }
-
-
 
 /*swiper*/
 .gallery__swiper {
@@ -1246,6 +1244,7 @@ body {
     max-width: calc((100% - 4px) / 2);
 }
 
+.accordion__question,
 .questions {
     margin: 0;
 }
@@ -1271,7 +1270,7 @@ body {
     display: block;
     width: 100%;
     margin-bottom: 0;
-    margin-top: -1.5px;
+    margin-top: -1.75px;
     border-top: 1px solid transparent;
     border-bottom: 1px solid var(--light-middle-gray);
     border-right: none;
@@ -1283,6 +1282,14 @@ body {
     cursor: pointer;
     transition: color 0.3s ease, border-color 0.3s ease;
 }
+
+/*
+.accordion__question-ac-3,
+.accordion__question-ac-4,
+.accordion__question-ac-6 {
+    margin-top: -2px;
+    margin-bottom: -2px;
+}*/
 
 .accordion__heading-text {
     position: relative;
@@ -2544,6 +2551,10 @@ body {
         margin-bottom: 133px;
     }
 
+    .about__title {
+        margin-bottom: 17px;
+    }
+
     .about-descr {
         max-width: 100%;
     }
@@ -2566,6 +2577,10 @@ body {
 
     .slides-container {
         height: 87%;
+    }
+
+    .catalog__title {
+        margin-bottom: 17px;
     }
 
     .catalog__descr {
@@ -2730,6 +2745,10 @@ body {
 
     .catalog__content {
         flex-direction: column-reverse;
+    }
+
+    .catalog__title {
+        margin-bottom: 13px;
     }
 
     .catalog__descr {
@@ -3023,6 +3042,10 @@ body {
         line-height: 28px;
     }
 
+    .check-box:after {
+        top: -1.75px;
+    }
+
     .gallery {
         padding-top: 50px;
         padding-bottom: 25px;
@@ -3048,8 +3071,9 @@ body {
         flex-direction: column-reverse;
     }
 
+
     .slides-container {
-        height: 370px;
+        height: 100%;
     }
 
     .gallery__swiper-navigation {
@@ -3067,6 +3091,7 @@ body {
 
     .gallery__content-select-title {
         margin: 0;
+        margin-bottom: 3px;
     }
 
     .choices-choices {
@@ -3192,6 +3217,7 @@ body {
     }
 
     .projects__title {
+        margin-bottom: 12px;
         font-size: 28px;
         line-height: 38px;
     }
