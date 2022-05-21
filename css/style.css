@@ -994,7 +994,7 @@ body {
     content: "";
     position: absolute;
     left: 0;
-    top: 10px;
+    top: 9px;
     width: 12px;
     height: 12px;
     border: 1px solid var(--white);
@@ -1018,9 +1018,9 @@ body {
 .check-box::after {
     content: '\22C5';
     position: absolute;
-    left: 1.5px;
-    top: -2.5px;
-    font-size: 30px;
+    left: 1.25px;
+    top: -4px;
+    font-size: 33px;
     color: #C283F3;
     opacity: 0;
     transition: opacity .3s ease-in-out;
@@ -3040,10 +3040,6 @@ body {
     .about-descr {
         font-size: 14px;
         line-height: 28px;
-    }
-
-    .check-box:after {
-        top: -1.75px;
     }
 
     .gallery {
