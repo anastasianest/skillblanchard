@@ -1020,7 +1020,7 @@ body {
     position: absolute;
     left: 1.5px;
     top: -3.5px;
-    font-size: 33px;
+    font-size: 32px;
     color: #C283F3;
     opacity: 0;
     transition: opacity .3s ease-in-out;
@@ -2569,6 +2569,10 @@ body {
 
     .gallery__content-left-elem {
         width: 36%;
+    }
+
+    .check-box::after {
+        top: -4px;
     }
 
     .tabs__descr {
