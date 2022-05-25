@@ -1018,8 +1018,8 @@ body {
 .check-box::after {
     content: '\22C5';
     position: absolute;
-    left: 1.25px;
-    top: -4px;
+    left: 1.5px;
+    top: -3.5px;
     font-size: 33px;
     color: #C283F3;
     opacity: 0;
